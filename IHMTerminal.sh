@@ -10,4 +10,14 @@
 #
 
 
-
+#
+#Mensagem de ajuda 
+#
+while getopts ac:f: OPCAO; do
+     case "${OPCAO}" in
+        a) analogico=1 ;;
+        c) comando=1; valor_comando="${OPTARG}" ;;
+        f) flags="${OPTARG}" ;;
+        h) help=1 ;;
+     esac
+  done
